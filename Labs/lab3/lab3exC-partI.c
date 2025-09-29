@@ -10,7 +10,7 @@ int main(void)
   int *delta;
   
   gamma = &alpha;
-  // point one
+  // point one 
 
   printf("point one: value of alpha is %d; value of beta is %d.\n", 
          alpha, beta);

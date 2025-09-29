@@ -23,11 +23,11 @@ void foo(int *a, int b)
   // Hint: a must point to an int variable. In other words,
   // a contains the address of an int variable.
 
-  // point one
+  // point one (main, bar, foo)
 
   *a = b + 7;
 
-  // point two
+  // point two (main, bar, foo)
 
   return;
 }

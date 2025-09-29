@@ -22,21 +22,23 @@ int main(void)
   int seconds_in, days, hours, minutes, seconds, scan_count;
 
   printf("Enter a number of seconds that is >= 0: ");
-  scan_count = scanf("%d", &seconds_in);  
-  if (scan_count != 1) {
+  scan_count = scanf("%d", &seconds_in);
+  if (scan_count != 1)
+  {
     printf("Unable to convert your input to an int.\n");
     exit(1);
-  } 
-  if (seconds_in < 0) {
+  }
+  if (seconds_in < 0)
+  {
     printf("%d s is out of range!\n", seconds_in);
     exit(1);
-  } 
-  
+  }
+
   printf("Doing conversion for input of %d s ... \n", seconds_in);
 
   // MAKE A CALL TO to_dhms HERE.
   to_dhms(seconds_in, &days, &hours, &minutes, &seconds);
-  
+
   printf("That is %d day(s), %d hours(s), %d minute(s), %d second(s).\n",
          days, hours, minutes, seconds);
 
@@ -47,16 +49,15 @@ int main(void)
 // Hint: / for integer division and % for integer remainder are useful here.
 // Another hint: There are 86400 seconds in a day.
 
-void to_dhms(int total_s, int *d, int *h, int *min, int *s) {
+void to_dhms(int total_s, int *d, int *h, int *min, int *s)
+{
 
-    int r =0;
-    *d = total_s/86400;
-    r = total_s % 86400;
-    *h = r/(60 *60);
-    r = r% (60 *60);
-   *min = r /60;
-   r = r %60;
-   *s = r;
-
-
+  int r = 0;
+  *d = total_s / 86400;
+  r = total_s % 86400;
+  *h = r / (60 * 60);
+  r = r % (60 * 60);
+  *min = r / 60;
+  r = r % 60;
+  *s = r;
 }

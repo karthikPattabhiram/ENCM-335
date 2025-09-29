@@ -20,7 +20,7 @@ int main(void)
 
   x = foo(&y, z);
 
-  // point three
+  // point three 
 
   printf("In main after call to foo, values are %d, %d, %d.\n",
 	 x, y, z);

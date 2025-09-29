@@ -14,6 +14,7 @@ int main(void)
   printf("This program computes the average of a list of integers.\n\n");
 
   printf("Please enter the first integer in the list:\n");
+  
   while (scanf("%d", &num_read) != EOF) {
     count++;
     sum += num_read;
