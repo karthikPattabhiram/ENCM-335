@@ -81,5 +81,6 @@ int safecat(char *dest, const char* src, int dest_size)
               dest[dest_len + (dest_size - dest_len - 1)] = '\0';
               return -1;
        }
+       
 }
 
